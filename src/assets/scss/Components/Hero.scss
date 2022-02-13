@@ -93,6 +93,7 @@
 
   &__wrapper {
     width: 100%;
+    position: relative;
   }
 }
 .featured {
@@ -105,7 +106,21 @@
     text-align: center;
     margin-bottom: 60px;
   }
-
+  &__button {
+    position: absolute;
+    top: 10px;
+    @include adaptiveValue('right', 40, 40);
+    transform: translateY(-50%);
+    margin-top: 0;
+    @media (max-width: $tablet) {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      top: 0;
+      transform: translateY(-50%);
+      right: 0;
+    }
+  }
   // .featured__item
   &-image {
     overflow: hidden;

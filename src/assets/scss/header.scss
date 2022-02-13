@@ -3,7 +3,6 @@
   @include adaptiveValue('width', 1400, 320);
   margin: 0 auto;
   display: flex;
-  position: relative;
   z-index: 1;
   align-items: center;
   background-color: rgba(0, 0, 0, 0);
