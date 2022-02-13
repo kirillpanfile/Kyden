@@ -1,11 +1,52 @@
 .hero-section {
   width: 100%;
   margin: 0 auto;
+  position: relative;
   background: url('../../assets/images/hero.png') center center/cover no-repeat;
-  @include adaptiveValue('height', 800, 460);
+  @include adaptiveValue('height', 800, 600);
   margin-bottom: 80px;
   // .hero-section__wrapper
-
+  .hero-section__decor {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    right: 0;
+    height: 100%;
+    // background-color: #fff;
+    color: #fff;
+    letter-spacing: 10px;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    @include adaptiveValue('font-size', 16, 10);
+    div {
+      position: relative;
+      &::before {
+        @include adaptiveValue('height', 70, 10);
+        @media (max-width: $tablet) {
+          display: none;
+        }
+        content: '';
+        width: 1px;
+        margin: 7px;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+      }
+      &::after {
+        content: '';
+        @include adaptiveValue('height', 70, 10);
+        @media (max-width: $tablet) {
+          display: none;
+        }
+        width: 1px;
+        margin: 7px;
+        height: 10%;
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
   &__wrapper {
     display: flex;
     width: 100%;
@@ -42,4 +83,74 @@
       margin: 0 auto;
     }
   }
+}
+
+.featured-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  // .featured-section__wrapper
+
+  &__wrapper {
+    width: 100%;
+  }
+}
+.featured {
+  // .featured__title
+  position: relative;
+  &__title {
+    font-family: Roboto;
+    font-weight: 700;
+    @include adaptiveValue('font-size', 24, 20);
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  // .featured__item
+  &-image {
+    overflow: hidden;
+    height: 360px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      transition: 0.2s ease-in-out;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  &__item {
+    margin-bottom: 34px;
+    position: relative;
+    width: 300px;
+    &:hover {
+      .featured-name {
+        color: $buttonColor;
+      }
+      .featured-image img {
+        cursor: pointer;
+        filter: brightness(70%);
+        transform: scale(1.02, 1.02);
+      }
+    }
+  }
+  &-name {
+    transition: 0.2s ease-in-out;
+    margin-top: 34px;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: rem(16);
+  }
+  &-price {
+    text-align: center;
+    margin-top: 14px;
+    font-size: rem(14);
+  }
+}
+.featured-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
