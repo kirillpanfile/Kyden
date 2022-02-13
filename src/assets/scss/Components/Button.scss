@@ -1,0 +1,12 @@
+.button {
+  width: max-content;
+  a {
+    color: $mainColor;
+    background-color: $buttonColor;
+    display: block;
+    padding: 16px 26px;
+    width: 100%;
+    font-size: rem(15);
+    font-weight: 500;
+  }
+}
