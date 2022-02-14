@@ -1,4 +1,5 @@
 // Подключение списка активных модулей
+// eslint-disable-next-line no-unused-vars
 import { flsModules } from "./modules.js";
 
 /* Проверка поддержки webp, добавление класса webp или no-webp для HTML */
@@ -46,6 +47,7 @@ export function fullVHfix() {
 	const fullScreens = document.querySelectorAll('[data-fullscreen]');
 	if (fullScreens.length && isMobile.any()) {
 		window.addEventListener('resize', fixHeight);
+		// eslint-disable-next-line no-inner-declarations
 		function fixHeight() {
 			let vh = window.innerHeight * 0.01;
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -193,7 +195,7 @@ export function spollers() {
 	const spollersArray = document.querySelectorAll('[data-spollers]');
 	if (spollersArray.length > 0) {
 		// Получение обычных слойлеров
-		const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {
+		const spollersRegular = Array.from(spollersArray).filter(function (item) {
 			return !item.dataset.spollers.split(",")[0];
 		});
 		// Инициализация обычных слойлеров
@@ -213,6 +215,7 @@ export function spollers() {
 		}
 
 		// Инициализация
+		// eslint-disable-next-line no-inner-declarations
 		function initSpollers(spollersArray, matchMedia = false) {
 			spollersArray.forEach(spollersBlock => {
 				spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
@@ -228,6 +231,7 @@ export function spollers() {
 			});
 		}
 		// Работа с контентом
+		// eslint-disable-next-line no-inner-declarations
 		function initSpollerBody(spollersBlock, hideSpollerBody = true) {
 			let spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
 			if (spollerTitles.length) {
@@ -245,6 +249,7 @@ export function spollers() {
 				});
 			}
 		}
+		// eslint-disable-next-line no-inner-declarations
 		function setSpollerAction(e) {
 			const el = e.target;
 			if (el.closest('[data-spoller]')) {
@@ -262,6 +267,7 @@ export function spollers() {
 				e.preventDefault();
 			}
 		}
+		// eslint-disable-next-line no-inner-declarations
 		function hideSpollersBody(spollersBlock) {
 			const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._spoller-active');
 			const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
@@ -441,13 +447,13 @@ data-showmore-button="скорость"
 Сниппет (HTML): showmore
 */
 export function showMore() {
-	window.addEventListener("load", function (e) {
+	window.addEventListener("load", function () {
 		const showMoreBlocks = document.querySelectorAll('[data-showmore]');
 		let showMoreBlocksRegular;
 		let mdQueriesArray;
 		if (showMoreBlocks.length) {
 			// Получение обычных объектов
-			showMoreBlocksRegular = Array.from(showMoreBlocks).filter(function (item, index, self) {
+			showMoreBlocksRegular = Array.from(showMoreBlocks).filter(function (item) {
 				return !item.dataset.showmoreMedia;
 			});
 			// Инициализация обычных объектов
@@ -590,7 +596,7 @@ export function indexInParent(parent, element) {
 // Обработа медиа запросов из атрибутов 
 export function dataMediaQueries(array, dataSetValue) {
 	// Получение объектов с медиа запросами
-	const media = Array.from(array).filter(function (item, index, self) {
+	const media = Array.from(array).filter(function (item) {
 		if (item.dataset[dataSetValue]) {
 			return item.dataset[dataSetValue].split(",")[0];
 		}
