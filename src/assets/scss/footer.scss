@@ -41,6 +41,7 @@
   i,
   a {
     margin-right: 20px;
+    font-size: rem(13);
   }
 }
 .footer-col {
@@ -49,9 +50,16 @@
 
   &__title {
     margin-bottom: 20px;
+    font-size: rem(14);
+    font-family: Roboto;
+    font-weight: 700;
   }
 
   // .footer-col__help
+
+  &__help {
+    font-size: rem(13);
+  }
 }
 
 //====================================================================================================

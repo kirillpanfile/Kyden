@@ -26,34 +26,13 @@
           <router-link to="shop">SHOP</router-link>
         </ButtonCustom>
         <div class="featured-row">
-          <div class="featured__item">
-            <div class="featured-image">
-              <img src="../assets/images/prod/1.png" alt="" />
-            </div>
-            <div class="featured-name">KYDEN ACDC</div>
-            <div class="featured-price">$25.50</div>
-          </div>
-          <div class="featured__item">
-            <div class="featured-image">
-              <img src="../assets/images/prod/2.png" alt="" />
-            </div>
-            <div class="featured-name">KYDEN ACDC</div>
-            <div class="featured-price">$25.50</div>
-          </div>
-          <div class="featured__item">
-            <div class="featured-image">
-              <img src="../assets/images/prod/3.png" alt="" />
-            </div>
-            <div class="featured-name">KYDEN ACDC</div>
-            <div class="featured-price">$25.50</div>
-          </div>
-          <div class="featured__item">
-            <div class="featured-image">
-              <img src="../assets/images/prod/4.png" alt="" />
-            </div>
-            <div class="featured-name">KYDEN ACDC</div>
-            <div class="featured-price">$25.50</div>
-          </div>
+          <product
+            v-for="(item, index) in this.clothes"
+            :key="index"
+            :name="item.name"
+            :price="item.price"
+            :img="item.img"
+          />
         </div>
       </div>
     </div>
@@ -90,8 +69,13 @@
 
 <script>
 import ButtonCustom from '../components/Button.vue'
+import Product from '../components/Product.vue'
 export default {
-  components: { ButtonCustom }
+  components: { ButtonCustom, Product },
+  inject: ['clothes'],
+  created() {
+    console.log(this.clothes)
+  }
 }
 </script>
 

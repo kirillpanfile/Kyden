@@ -53,7 +53,10 @@ $mobileSmall: em(479.98); // Телефоны S
 @import 'base/null';
 
 body {
-  background: url('../images/bg.png') center center/cover;
+  background: url('../images/bg.png') no-repeat center/cover;
+  @media (max-width: $mobile) {
+    background: url('../images/bg.png');
+  }
   background-attachment: fixed;
   // Скролл заблокирован
   .lock & {
@@ -143,6 +146,7 @@ body {
 @import 'footer';
 @import 'Components/Button';
 @import 'Components/Hero';
+@import 'Components/Shop';
 
 // Подключение стилей отдельных страниц
 @import 'home';

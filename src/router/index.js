@@ -15,7 +15,8 @@ const routes = [
   {
     path: '/cart',
     name: 'Cart',
-    component: Cart
+    component: Cart,
+    meta: { transition: 'slide-left' }
   },
   {
     path: '/checkout',
@@ -30,7 +31,8 @@ const routes = [
   {
     path: '/shop',
     name: 'Shop',
-    component: Shop
+    component: Shop,
+    meta: { transition: 'slide-left' }
   },
   {
     path: '/about',

@@ -290,7 +290,7 @@ window.FontAwesomeKitConfig = {
                         o = !0
                     );
                 } catch (t) {
-                    ; (r = !0), (i = t)
+                     (r = !0), (i = t)
                 } finally {
                     try {
                         o || null == a.return || a.return()
@@ -320,7 +320,7 @@ window.FontAwesomeKitConfig = {
         )
     }
     function i(t, e) {
-        ; (null == e || e > t.length) && (e = t.length)
+         (null == e || e > t.length) && (e = t.length)
         for (var n = 0, o = new Array(e); n < e; n++) o[n] = t[n]
         return o
     }
@@ -424,7 +424,7 @@ window.FontAwesomeKitConfig = {
         return !1
     }
     function b(t, e) {
-        ; (t !== e && y(t, e)) || g(t, e)
+         (t !== e && y(t, e)) || g(t, e)
     }
     function g(t, e) {
         'pending' === t._state && ((t._state = 'settled'), (t._data = e), p(S, t))
@@ -436,10 +436,10 @@ window.FontAwesomeKitConfig = {
         t._then = t._then.forEach(v)
     }
     function S(t) {
-        ; (t._state = 'fulfilled'), A(t)
+         (t._state = 'fulfilled'), A(t)
     }
     function O(t) {
-        ; (t._state = 'rejected'),
+         (t._state = 'rejected'),
             A(t),
             !t._handled && d && global.process.emit('unhandledRejection', t._data, t)
     }
@@ -467,7 +467,7 @@ window.FontAwesomeKitConfig = {
                     }
                 })(t, this)
     }
-    ; (E.prototype = {
+     (E.prototype = {
         constructor: E,
         _state: 'pending',
         _then: null,
@@ -504,7 +504,7 @@ window.FontAwesomeKitConfig = {
                     return (
                         r++,
                         function (n) {
-                            ; (o[t] = n), --r || e(o)
+                             (o[t] = n), --r || e(o)
                         }
                     )
                 }
@@ -678,7 +678,7 @@ window.FontAwesomeKitConfig = {
         )
     }
     function k(t, e) {
-        ; (e.autoA11y = t.autoA11y.enabled),
+         (e.autoA11y = t.autoA11y.enabled),
             'pro' === t.license &&
             ((e.autoFetchSvg = !0),
                 (e.fetchSvgFrom =

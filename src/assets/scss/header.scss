@@ -19,8 +19,11 @@
   &__links {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     width: 140px;
+    i {
+      margin-right: 30px;
+    }
     @media (max-width: $mobile) {
       display: none;
     }

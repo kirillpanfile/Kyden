@@ -124,7 +124,7 @@
   // .featured__item
   &-image {
     overflow: hidden;
-    height: 360px;
+    // height: 360px;
     background-color: #000;
     display: flex;
     justify-content: center;
@@ -138,7 +138,7 @@
   &__item {
     margin-bottom: 34px;
     position: relative;
-    width: 300px;
+    @include adaptiveValue('width', 300, 180);
     &:hover {
       .featured-name {
         color: $buttonColor;
@@ -156,7 +156,7 @@
     text-align: center;
     font-family: Roboto;
     font-weight: 700;
-    font-size: rem(16);
+    font-size: rem(14);
   }
   &-price {
     text-align: center;
@@ -167,5 +167,5 @@
 .featured-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }

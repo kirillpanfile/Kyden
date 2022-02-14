@@ -1,0 +1,27 @@
+.shop-section {
+  // .shop-section__wrapper
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  &__wrapper {
+    width: 100%;
+    position: relative;
+  }
+}
+.shop {
+  // .shop__title
+
+  &__title {
+    font-size: rem(36);
+    margin-bottom: 40px;
+    margin-top: 60px;
+    font-family: Roboto;
+    font-weight: 700;
+  }
+}
+.shop-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
