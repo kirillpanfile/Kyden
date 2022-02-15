@@ -24,15 +24,6 @@ export default {
       required: true
     }
   }
-  //find sort an array of objects my a value js.
-  // Source: https://stackoverflow.com/a/10542368 .
-  // var objs = [
-  //   { first_nom: 'Lazslo',last_nom: 'Jamf' },
-  //   { first_nom: 'Pig', last_nom: 'Bodine'  },
-  //   { first_nom: 'Pirate', last_nom: 'Prentice' }
-  // ];
-
-  // var sortedObjs = _.sortBy( objs, 'first_nom' );
 }
 </script>
 

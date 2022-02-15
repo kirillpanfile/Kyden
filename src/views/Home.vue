@@ -27,7 +27,7 @@
         </ButtonCustom>
         <div class="featured-row">
           <product
-            v-for="(item, index) in this.clothes"
+            v-for="(item, index) in featuredItems"
             :key="index"
             :name="item.name"
             :price="item.price"
@@ -73,8 +73,23 @@ import Product from '../components/Product.vue'
 export default {
   components: { ButtonCustom, Product },
   inject: ['clothes'],
+  data() {
+    return {
+      items: this.clothes
+    }
+  },
   created() {
-    console.log(this.clothes)
+    console.log(this.items)
+  },
+  computed: {
+    featuredItems() {
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+      return this.items
+        .sort((a, b) =>
+          a.raiting < b.raiting ? 1 : b.raiting < a.raiting ? -1 : 0
+        )
+        .slice(0, 4)
+    }
   }
 }
 </script>
