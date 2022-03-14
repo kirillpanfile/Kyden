@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
-import Cart from '../views/Cart'
+import Cart from '../views/Cart.vue'
 import Checkout from '../views/Checkout.vue'
 import Product from '../views/Product.vue'
 import Shop from '../views/Shop.vue'
