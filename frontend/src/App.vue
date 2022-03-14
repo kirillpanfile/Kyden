@@ -3,6 +3,7 @@
     <Header />
     <div class="main__container">
       <router-view></router-view>
+      {{ cloth }}
     </div>
   </div>
 </template>
@@ -13,6 +14,14 @@ import Header from '@/components/Header.vue'
 export default {
   name: 'App',
   components: { Header },
+  mounted() {
+    this.$store.dispatch('loadClothes')
+  },
+  computed: {
+    cloth() {
+      return this.$store.state.clothes
+    }
+  },
   data() {
     return {
       clothes: [
