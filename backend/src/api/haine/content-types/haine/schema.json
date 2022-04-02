@@ -1,26 +1,17 @@
 {
   "kind": "collectionType",
-  "collectionName": "cloths",
+  "collectionName": "haines",
   "info": {
-    "singularName": "cloth",
-    "pluralName": "cloths",
-    "displayName": "Cloth"
+    "singularName": "haine",
+    "pluralName": "haines",
+    "displayName": "haine"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string"
-    },
-    "price": {
-      "type": "float"
-    },
-    "rating": {
-      "type": "float"
-    },
-    "img": {
+    "imagine": {
       "allowedTypes": [
         "images",
         "files",

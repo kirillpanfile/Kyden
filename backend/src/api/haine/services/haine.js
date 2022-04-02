@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * cloth service.
+ * haine service.
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::cloth.cloth');
+module.exports = createCoreService('api::haine.haine');

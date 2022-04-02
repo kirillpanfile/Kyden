@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- *  cloth controller
+ *  haine controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::cloth.cloth');
+module.exports = createCoreController('api::haine.haine');

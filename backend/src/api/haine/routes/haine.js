@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * cloth router.
+ * haine router.
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::cloth.cloth');
+module.exports = createCoreRouter('api::haine.haine');
