@@ -15,7 +15,7 @@ export default {
   },
 
   created() {
-    fetch("/api/users")
+    fetch("/api/products")
       .then((res) => res.json())
       .then((json) => {
         this.users = json.users;
