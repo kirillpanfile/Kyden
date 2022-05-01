@@ -9,6 +9,9 @@ export default {
           products: data,
         });
       },
+      fixtures: {
+        products: data,
+      },
       routes() {
         this.timing = 200;
         this.namespace = "api";

@@ -1,25 +1,14 @@
 <template>
   <ul id="users">
-    <li v-for="user in users" v-bind:key="user.id">{{ user.name }}</li>
+    <li></li>
   </ul>
 </template>
 
 <script>
 export default {
   name: "app",
-
-  data() {
-    return {
-      users: [],
-    };
-  },
-
-  created() {
-    fetch("/api/products")
-      .then((res) => res.json())
-      .then((json) => {
-        this.users = json.users;
-      });
+  mounted: () => {
+    this.$store.dispatch("getProducts");
   },
 };
 </script>
