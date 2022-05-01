@@ -27,9 +27,9 @@ export default {
     color 200ms;
   border: 2px solid transparent;
   border-radius: 0px;
-  padding: 17px 20px 16px;
+  padding: 14px 18px 14px;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   line-height: 1.2;
   text-align: center;
 }

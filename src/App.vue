@@ -1,30 +1,23 @@
 <template>
-  <router-view>
-    <router-link to="/">Home</router-link>
-    <app-button>Hello</app-button>
-  </router-view>
+  <div class="container container--outer">
+    <my-header></my-header>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
+import MyHeader from "./components/MyHeader.vue";
 export default {
   name: "app",
+  components: {
+    MyHeader,
+  },
   mounted() {
     this.$store.dispatch("getProducts");
   },
 };
 </script>
 <style lang="scss">
-html {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
 body {
   position: relative;
   padding-bottom: 0;
@@ -50,7 +43,6 @@ button {
   z-index: -1;
   background-image: url("/src/assets/pattern bg.png");
   opacity: 0.03;
-  // background-color: rgba(0, 0, 0, 1);
   z-index: -1;
 }
 </style>

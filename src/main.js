@@ -4,10 +4,8 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import components from "./components/UI";
-
-// Create server
 import server from "./server";
-// if (process.env.NODE_ENV === "development") server();
+import "./styles/style.scss";
 
 // Create App
 const app = createApp(App);
