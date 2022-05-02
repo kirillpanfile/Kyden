@@ -16,7 +16,9 @@
         </div>
         <div class="header__sections-right">
           <div class="header__button">
-            <router-link to="/shop"><app-button>SHOP</app-button></router-link>
+            <router-link to="/shop">
+              <app-button type="primary">SHOP</app-button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -42,6 +44,7 @@ export default {};
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 0px 20px;
   }
   &__social {
     display: flex;
@@ -58,9 +61,14 @@ export default {};
       width: 40%;
     }
   }
-
+  &__sections-left {
+    width: 80px;
+    display: flex;
+    flex: 0 auto;
+  }
   &__sections-right {
-    flex: 0 0 auto;
+    width: 80px;
+    flex: 0 0 0 auto;
   }
 }
 </style>

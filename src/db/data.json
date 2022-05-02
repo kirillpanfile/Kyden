@@ -3,36 +3,42 @@
     "name": "KYDEN NARUTO",
     "price": "$16.00",
     "image": "/src/assets/images/1.png",
-    "sizes": ["S", "M", "L", "XL", "XXL"]
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "stars": 4.8
   },
   {
     "name": "KYDEN AC|DC",
     "price": "$18.40",
     "image": "/src/assets/images/2.png",
-    "sizes": ["S", "M", "L"]
+    "sizes": ["S", "M", "L"],
+    "stars": 4.9
   },
   {
     "name": "KYDEN PSB",
     "price": "$14.90",
     "image": "/src/assets/images/3.png",
-    "sizes": ["S", "L", "XL"]
+    "sizes": ["S", "L", "XL"],
+    "stars": 4.8
   },
   {
     "name": "KYDEN DREAMS",
     "price": "$24.99",
     "image": "/src/assets/images/4.png",
-    "sizes": ["XS", "S", "L", "XL"]
+    "sizes": ["XS", "S", "L", "XL"],
+    "stars": 4.4
   },
   {
     "name": "KYDEN GRAFI",
     "price": "$18.40",
     "image": "/src/assets/images/5.png",
-    "sizes": ["XS", "S", "L", "XL"]
+    "sizes": ["XS", "S", "L", "XL"],
+    "stars": 4.3
   },
   {
     "name": "KYDEN SWD",
     "price": "$18.40",
     "image": "/src/assets/images/6.png",
-    "sizes": ["XS", "S", "L"]
+    "sizes": ["XS", "S", "L"],
+    "stars": 5
   }
 ]
