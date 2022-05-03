@@ -1,3 +1,4 @@
+//====================================================================================================
 .hero-section {
   width: 100%;
   height: 800px;
@@ -5,9 +6,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url("/src/assets/hero.png") center center/cover no-repeat; // .hero-section__decor
+  background: url("/src/assets/hero.png") center center/cover no-repeat;
+
   &__decor {
-    color: #f6eae1;
+    color: $mainColor;
     writing-mode: vertical-rl;
     text-orientation: upright;
     right: 0;
@@ -37,9 +39,6 @@
       }
     }
   }
-
-  // .hero-section__wrapper
-
   &__wrapper {
     padding: 20px;
   }
@@ -48,25 +47,20 @@
   display: block;
   max-width: 1175px;
   margin: 0 auto;
-  // .hero-wrapper__title
 
   &__title {
     font-size: 5.225rem;
-    color: #f6eae1;
+    color: $mainColor;
     font-weight: 700;
   }
-
-  // .hero-wrapper__descr
 
   &__descr {
     margin-top: 30px;
     max-width: 560px;
-    color: #f6eae1;
+    color: $mainColor;
     font-size: 1.125rem;
     line-height: 1.77;
   }
-
-  // .hero-wrapper__button
 
   &__button {
     display: flex;
@@ -78,74 +72,63 @@
   }
 }
 .featured-section {
-  // .featured-section__wrapper
-
   &__wrapper {
     position: relative;
   }
 }
 .featured-wrapper {
-  // max-width: 1440px;
   margin: 0 auto;
 }
 .featured {
-  // .featured__title
-
   &__title {
     margin-top: 80px;
     margin-bottom: 20px;
     font-size: 3.225rem;
-    color: #f6eae1;
+    color: $mainColor;
     text-align: center;
   }
-
-  // .featured__button
-
 }
+
 .featured-row {
   margin-top: 80px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .line {
   width: 100%;
   height: 1px;
   background-color: #111111;
 }
+
 .footer {
-  // display: flex;
-  // align-items: center;
-  // width: 100%;
   margin: 0 auto;
 }
+
 .footer-wrapper {
   display: block;
   width: 100%;
-  // .footer-wrapper__col
   margin-top: 40px;
 }
+
 .footer-col {
   margin-bottom: 20px;
-  // .footer-col__title
-
   &__title {
     text-align: center;
     font-size: 1.4rem;
-    color: #f6eae1;
+    color: $mainColor;
     font-weight: 700;
     margin: 16px 0;
   }
 
-  // .footer-col__help
-
   &__help {
     text-align: center;
-    color: #f6eae1;
+    color: $mainColor;
     padding: 10px;
     a {
       text-decoration: underline;
-      color: #f6eae1;
+      color: $mainColor;
       margin: 6px;
     }
     span {
@@ -158,11 +141,10 @@
   display: flex;
   margin: 0 auto;
   max-width: max-content;
-  color: #f6eae1;
-  border: 1px solid #f6eae1;
-  // justify-content: flex-start;
+  color: $mainColor;
+  border: 1px solid $mainColor;
   &__input {
-    color: #f6eae1;
+    color: $mainColor;
     border: none;
     width: 300px;
     text-align: left;
@@ -172,7 +154,7 @@
 
   &__button {
     text-align: center;
-    color: #f6eae1;
+    color: $mainColor;
     background-color: #cd412b;
     margin: 10px;
     padding: 20px;
@@ -180,3 +162,4 @@
     width: max-content;
   }
 }
+//====================================================================================================

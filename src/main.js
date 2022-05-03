@@ -5,7 +5,8 @@ import router from "./router";
 import store from "./store";
 import components from "./components/UI";
 import server from "./server";
-import "./styles/style.scss";
+// import "./styles/style.scss";
+import "./scss/style.scss";
 
 // Create App
 const app = createApp(App);

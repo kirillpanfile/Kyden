@@ -1,15 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,regular,italic,700,700italic&display=swap);
-@import "./tools/reset";
-@import "./tools/button";
-@import "./utils/hero";
+// Заголовки, общие БЄМ блоки и проче...
 body {
   position: relative;
   padding-bottom: 0;
   width: 100%;
-  min-height: 100%;
+  min-height: 100% !important;
   background-color: #111111;
-  font-family: Rubik, sans-serif;
 }
 button {
   border: none;
@@ -49,8 +44,6 @@ h6,
   opacity: 0.05;
   z-index: -1;
   background-image: url("/src/assets/pattern bg.png");
-  opacity: 0.03;
-  z-index: -1;
 }
 .container {
   display: block;

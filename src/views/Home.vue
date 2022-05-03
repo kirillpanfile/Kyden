@@ -10,7 +10,7 @@
           </h1>
           <p class="hero-wrapper__descr">
             Check out Kyden winter collection. Available only for a limited
-            time.
+            amount of time.
           </p>
           <div class="hero-wrapper__button">
             <router-link to="shop">

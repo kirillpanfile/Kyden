@@ -1,3 +1,17 @@
+// //<BUTTONS (a.btn+tab)>
+// // Снипет (HTML): btn
+
+// .button {
+// 	display: inline-flex;
+// 	padding: 0px 0px;
+// 	@media (any-hover: hover) {
+// 		&:hover {
+// 		}
+// 	}
+// 	&._fw {
+// 		width: 100%;
+// 	}
+// }
 .btn {
   font-family: "Roboto Condensed", sans-serif;
   line-height: 1.2;
