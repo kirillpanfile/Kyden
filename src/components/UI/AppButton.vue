@@ -4,6 +4,7 @@
     :class="{
       'btn--primary': type == 'primary',
       'btn--expand': type == 'expand',
+      'btn--skeleton': type == 'skelet',
     }"
   >
     <slot></slot>

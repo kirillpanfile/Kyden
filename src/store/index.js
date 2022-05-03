@@ -18,7 +18,7 @@ export default createStore({
           "Content-Type": "application/json",
         },
       });
-      commit("SET_PRODUCTS", response);
+      commit("SET_PRODUCTS", response.data);
     },
   },
   modules: {},

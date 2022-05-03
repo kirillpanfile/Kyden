@@ -26,6 +26,13 @@
   background-color: #cd412b;
   color: #f6eae1;
 }
+
+.btn--skeleton {
+  background: none;
+  border: 1px solid #f6eae1;
+  color: #f6eae1;
+  padding: 22px 26px;
+}
 .btn:hover {
   opacity: 0.8;
 }

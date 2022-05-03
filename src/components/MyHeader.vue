@@ -11,7 +11,7 @@
         </div>
         <div class="header__sections-center">
           <div class="header__logo">
-            <img src="../assets/LOGO-WHITE.png" alt="" />
+            <router-link to="/"><img src="../assets/LOGO-WHITE.png" alt="" /></router-link>
           </div>
         </div>
         <div class="header__sections-right">

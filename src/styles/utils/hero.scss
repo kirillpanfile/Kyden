@@ -83,24 +83,43 @@
   // .featured-section__wrapper
 
   &__wrapper {
+    position: relative;
   }
 }
 .featured-wrapper {
+  // max-width: 1440px;
+  margin: 0 auto;
 }
 .featured {
   // .featured__title
 
   &__title {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-size: 3.225rem;
+    color: #f6eae1;
+    text-align: center;
   }
 
   // .featured__button
 
   &__button {
+    top: 0;
+    right: 0px;
+    position: absolute;
+
   }
 }
 .featured-row {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  // flex-wrap: wrap;
 }
 .line {
+  width: 100%;
+  height: 1px;
+  background-color: #111111;
 }
 .footer {
 }

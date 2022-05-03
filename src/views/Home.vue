@@ -24,18 +24,21 @@
     </div>
     <div class="featured-section">
       <div class="featured-section__wrapper featured-wrapper">
-        <div class="featured__title">FEATURED PRODUCTS</div>
-        <app-button type="primary" class="featured__button">
-          <router-link to="shop">SHOP</router-link>
-        </app-button>
+        <h1 class="featured__title">FEATURED PRODUCTS</h1>
+
+        <router-link to="shop">
+          <app-button type="skelet" class="featured__button"
+            >VISIT STORE</app-button
+          >
+        </router-link>
         <div class="featured-row">
-          <product
-            v-for="(item, index) in featuredItems"
-            :key="index"
-            :name="item.name"
-            :price="item.price"
-            :img="item.img"
-          />
+          <div v-for="item in products" :key="item.id">
+            <product
+              :image="item.image"
+              :name="item.name"
+              :price="item.price"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -67,19 +70,37 @@
         </div>
       </div>
     </footer>
+    {{ products }}
   </main>
 </template>
 
 <script>
-export default {};
+import product from "../components/MyProduct.vue";
+export default {
+  components: {
+    product,
+  },
+  computed: {
+    products() {
+      try {
+        let tmp = this.$store.state.products;
+        return Object.values(tmp)
+          .map((el) => (el = JSON.parse(JSON.stringify(el))))
+          .sort((a, b) => b.stars - a.stars)
+          .slice(0, 4);
+      } catch (error) {
+        console.table(error);
+      }
+    },
+  },
+};
 </script>
 
 <style>
 .line {
   width: 100%;
-  max-width: 1400px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 20px;
   height: 2px;
   background: rgba(255, 255, 255, 0.12);
