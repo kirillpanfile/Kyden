@@ -72,8 +72,6 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 35px;
-    margin-right: -10px;
-    margin-left: -10px;
     button {
       font-size: 16px !important;
     }
@@ -103,18 +101,12 @@
 
   // .featured__button
 
-  &__button {
-    top: 0;
-    right: 0px;
-    position: absolute;
-
-  }
 }
 .featured-row {
   margin-top: 80px;
   display: flex;
   justify-content: center;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .line {
   width: 100%;
@@ -122,29 +114,69 @@
   background-color: #111111;
 }
 .footer {
+  // display: flex;
+  // align-items: center;
+  // width: 100%;
+  margin: 0 auto;
 }
 .footer-wrapper {
+  display: block;
+  width: 100%;
   // .footer-wrapper__col
-
-  &__col {
-  }
+  margin-top: 40px;
 }
 .footer-col {
+  margin-bottom: 20px;
   // .footer-col__title
 
   &__title {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #f6eae1;
+    font-weight: 700;
+    margin: 16px 0;
   }
 
   // .footer-col__help
 
   &__help {
+    text-align: center;
+    color: #f6eae1;
+    padding: 10px;
+    a {
+      text-decoration: underline;
+      color: #f6eae1;
+      margin: 6px;
+    }
+    span {
+      display: block;
+      margin-top: 6px;
+    }
   }
 }
-.fa-brands {
-}
-.fa-twitter {
-}
-.fa-instagram {
-}
-.fa-facebook {
+.footer-form {
+  display: flex;
+  margin: 0 auto;
+  max-width: max-content;
+  color: #f6eae1;
+  border: 1px solid #f6eae1;
+  // justify-content: flex-start;
+  &__input {
+    color: #f6eae1;
+    border: none;
+    width: 300px;
+    text-align: left;
+    padding-left: 40px;
+    background-color: transparent;
+  }
+
+  &__button {
+    text-align: center;
+    color: #f6eae1;
+    background-color: #cd412b;
+    margin: 10px;
+    padding: 20px;
+    display: block;
+    width: max-content;
+  }
 }

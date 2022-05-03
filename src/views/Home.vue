@@ -25,12 +25,6 @@
     <div class="featured-section">
       <div class="featured-section__wrapper featured-wrapper">
         <h1 class="featured__title">FEATURED PRODUCTS</h1>
-
-        <router-link to="shop">
-          <app-button type="skelet" class="featured__button"
-            >VISIT STORE</app-button
-          >
-        </router-link>
         <div class="featured-row">
           <div v-for="item in products" :key="item.id">
             <product
@@ -43,42 +37,17 @@
       </div>
     </div>
     <div class="line"></div>
-    <footer class="footer">
-      <div class="footer-wrapper">
-        <div class="footer-wrapper__col footer-col">
-          <div class="footer-col__title">JOIN THE NEWSLETTER</div>
-          <form action="" @submit.prevent>
-            <input type="text" placeholder="Your Email" />
-            <button>SUBSCRIBE</button>
-          </form>
-        </div>
-        <div class="footer-wrapper__col footer-col">
-          <div class="footer-col__title">FIND US ON SOCIAL MEDIA</div>
-          <div>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-facebook"></i>
-          </div>
-        </div>
-        <div class="footer-wrapper__col footer-col">
-          <div class="footer-col__title">NEED HELP?</div>
-          <div class="footer-col__help">
-            <a href="mailto:kirillpanfile@gmail.com">Contact us</a>
-            <a href="">Privacy Policy</a>
-            <span>© 2022</span>
-          </div>
-        </div>
-      </div>
-    </footer>
-    {{ products }}
+    <my-footer></my-footer>
   </main>
 </template>
 
 <script>
 import product from "../components/MyProduct.vue";
+import MyFooter from "../components/MyFooter.vue";
 export default {
   components: {
     product,
+    MyFooter,
   },
   computed: {
     products() {
