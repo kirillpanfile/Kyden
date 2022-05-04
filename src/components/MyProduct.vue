@@ -34,41 +34,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.product {
-  min-width: 25%;
-  margin: 0px 14px;
-}
-.product-inner {
-  padding: 0px 20px;
-  &__image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // background-color: #ececec;
-    transition: 0.3s ease-in-out;
-    img {
-      width: 320px;
-      max-height: 400px;
-      object-fit: cover;
-    }
-    :hover {
-      cursor: pointer;
-      transition: 0.3s ease;
-      opacity: 0.7;
-    }
-  }
-
-  &__info {
-    flex-wrap: 900;
-    font-size: 1rem;
-    margin-top: 26px;
-    text-align: center;
-  }
-
-  &__price {
-    margin-top: 16px;
-    color: #f6eae1;
-  }
-}
-</style>
+<style lang="scss"></style>

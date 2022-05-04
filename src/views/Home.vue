@@ -23,8 +23,13 @@
       </div>
     </div>
     <div class="featured-section">
-      <div class="featured-section__wrapper featured-wrapper">
-        <h1 class="featured__title">FEATURED PRODUCTS</h1>
+      <div class="featured__container featured-section__wrapper">
+        <div class="featured__data">
+          <h1 class="featured__title">FEATURED PRODUCTS</h1>
+          <div class="featured__button">
+            <app-button type="skelet">VISIT STORE</app-button>
+          </div>
+        </div>
         <div class="featured-row">
           <div v-for="item in products" :key="item.id">
             <product

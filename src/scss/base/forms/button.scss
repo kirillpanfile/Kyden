@@ -43,9 +43,12 @@
 
 .btn--skeleton {
   background: none;
-  border: 1px solid #f6eae1;
+  border: 1px solid #f6eae18f;
   color: #f6eae1;
-  padding: 22px 26px;
+  padding: 0px 12px;
+  height: 100%;
+  padding: 14px 18px ;
+  font-size: rem(12);
 }
 .btn:hover {
   opacity: 0.8;
