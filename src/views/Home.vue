@@ -42,18 +42,14 @@
         </div>
       </div>
     </div>
-    <div class="line"></div>
-    <my-footer></my-footer>
   </main>
 </template>
 
 <script>
 import product from "../components/MyProduct.vue";
-import MyFooter from "../components/MyFooter.vue";
 export default {
   components: {
     product,
-    MyFooter,
   },
   computed: {
     products() {

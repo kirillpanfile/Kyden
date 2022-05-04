@@ -3,7 +3,7 @@ import data from "./db/data.json";
 
 export default {
   install: () => {
-    const server = new Server({
+    new Server({
       seeds(server) {
         server.db.loadData({
           products: data,
@@ -13,7 +13,7 @@ export default {
         products: data,
       },
       routes() {
-        this.timing = 200;
+        this.timing = 500;
         this.namespace = "api";
         this.get("/products", (schema) => schema.db.products);
       },
