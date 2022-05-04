@@ -10,6 +10,14 @@ const routes = [
     name: "shop",
     component: () => import("../views/Shop.vue"),
   },
+  {
+    path: "/product/:id",
+    name: "product",
+    component: () => import("../views/ProductPage.vue"),
+    meta: {
+      requiresAuth: false,
+    }
+  }
 ];
 
 const router = createRouter({
