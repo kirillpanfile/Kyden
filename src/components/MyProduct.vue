@@ -19,8 +19,8 @@
           </div>
         </div>
       </div>
-    </div></router-link
-  >
+    </div>
+  </router-link>
 </template>
 
 <script>

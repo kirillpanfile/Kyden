@@ -15,7 +15,7 @@
       <div class="footer-wrapper__col footer-col">
         <div class="footer-col__title">FIND ME ON SOCIAL MEDIA</div>
         <div class="footer__data">
-          <a href="">
+          <a class="footer-icon" href="">
             <img src="../assets/twitter.svg" alt="" />
           </a>
         </div>
@@ -34,8 +34,8 @@
 
 <script>
 export default {
-  name: "my-footer",
-};
+  name: 'my-footer'
+}
 </script>
 
 <style></style>

@@ -1,79 +1,105 @@
 //====================================================================================================
 .footer {
-    margin: 0 auto;
-    padding-bottom: 40px;
-    &__data {
-        height: 60px;
-        display: flex;
-        align-items: center;
-        a {
-            margin-right: 20px;
-        }
+  margin: 0 auto;
+  padding-bottom: 40px;
+  &__data {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    a {
+      margin-right: 20px;
     }
+  }
+  &-icon {
+    @media (max-width: $mobile) {
+      display: block;
+      width: 100%;
+      transform: translateX(50%);
+    }
+  }
 }
 
 .footer-wrapper {
-    @media(max-width: $tablet) {
-        flex-wrap: wrap;
-    }
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .footer-col {
-    margin-bottom: 20px;
-    width: 100%;
-    &__title {
-        text-align: left;
-        font-size: rem(12);
-        color: $mainColor;
-        font-weight: 700;
-        margin: 16px 0;
+  @media (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+  margin-bottom: 20px;
+  width: 100%;
+  &__title {
+    text-align: left;
+    font-size: rem(12);
+    color: $mainColor;
+    font-weight: 700;
+    margin: 16px 0;
+    margin-bottom: rem(26);
+    @media (max-width: $tablet) {
+    }
+  }
+
+  &__help {
+    text-align: center;
+    color: $mainColor;
+    padding: 10px;
+
+    a {
+      text-decoration: underline;
+      color: $mainColor;
+      margin: 6px;
     }
 
-    &__help {
-        text-align: center;
-        color: $mainColor;
-        padding: 10px;
-
-        a {
-            text-decoration: underline;
-            color: $mainColor;
-            margin: 6px;
-        }
-
-        span {
-            display: block;
-            margin-top: 6px;
-        }
+    span {
+      display: block;
+      margin-top: 6px;
     }
+  }
 }
 
 .footer-form {
-    display: flex;
-    max-width: max-content;
+  display: flex;
+  max-width: min-content;
+  color: $mainColor;
+  border: 1px solid $mainColor;
+
+  &__input {
     color: $mainColor;
-    border: 1px solid $mainColor;
-
-    &__input {
-        color: $mainColor;
-        outline: none;
-        border: none;
-        text-align: left;
-        padding-left: 40px;
-        background-color: transparent;
+    outline: none;
+    border: none;
+    text-align: left;
+    padding-left: 40px;
+    background-color: transparent;
+    @media (max-width: $pc) {
+      width: 150px;
     }
-
-    &__button {
-        text-align: center;
-        color: $mainColor;
-        background-color: #cd412b;
-        margin: 10px;
-        padding: 10px;
-        display: block;
-        width: max-content;
+    @media (max-width: $mobile) {
+      width: 200px;
     }
+  }
+
+  &__button {
+    text-align: center;
+    color: $mainColor;
+    background-color: $btnColor;
+    margin: 10px;
+    font-size: rem(12);
+    font-weight: 700;
+    padding: 14px 16px;
+    display: block;
+    width: max-content;
+  }
 }
 //====================================================================================================
