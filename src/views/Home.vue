@@ -26,9 +26,11 @@
       <div class="featured__container featured-section__wrapper">
         <div class="featured__data">
           <h1 class="featured__title">FEATURED PRODUCTS</h1>
-          <div class="featured__button">
-            <app-button type="skelet">VISIT STORE</app-button>
-          </div>
+          <router-link to="shop">
+            <div class="featured__button">
+              <app-button type="skelet">VISIT STORE</app-button>
+            </div>
+          </router-link>
         </div>
         <div class="featured-row">
           <div v-for="item in products" :key="item.id">
@@ -46,25 +48,25 @@
 </template>
 
 <script>
-import product from "../components/MyProduct.vue";
+import product from '@/components/myProduct'
 export default {
   components: {
-    product,
+    product
   },
   computed: {
     products() {
       try {
-        let tmp = this.$store.state.products;
+        let tmp = this.$store.state.products
         return Object.values(tmp)
           .map((el) => (el = JSON.parse(JSON.stringify(el))))
           .sort((a, b) => b.stars - a.stars)
-          .slice(0, 4);
+          .slice(0, 4)
       } catch (error) {
-        console.table(error);
+        console.table(error)
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style>

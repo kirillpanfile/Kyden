@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import myProduct from '../components/MyProduct.vue'
+import myProduct from '@/components/myProduct'
 export default {
   name: 'Shop',
   components: {

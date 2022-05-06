@@ -2,23 +2,23 @@
   <div class="container container--outer">
     <my-header></my-header>
     <router-view></router-view>
-    <div class="line"></div>
+    <app-line></app-line>
     <my-footer></my-footer>
   </div>
 </template>
 
 <script>
-import MyHeader from "./components/MyHeader.vue";
-import MyFooter from "./components/MyFooter.vue";
+import MyHeader from './components/myHeader'
+import MyFooter from './components/myFooter'
 export default {
-  name: "app",
+  name: 'app',
   components: {
     MyHeader,
-    MyFooter,
+    MyFooter
   },
   mounted() {
-    this.$store.dispatch("getProducts");
-  },
-};
+    this.$store.dispatch('getProducts')
+  }
+}
 </script>
 <style lang="scss"></style>

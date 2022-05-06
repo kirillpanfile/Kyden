@@ -43,8 +43,8 @@
               {{ size }}
             </button>
           </div>
-          <div class="line"></div>
         </div>
+        <app-line></app-line>
         <div class="card__count">
           <select name="count" v-model="count">
             <option v-for="i in 5" :key="i">{{ i }}</option>

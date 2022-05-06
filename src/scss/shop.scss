@@ -4,6 +4,9 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    @media (max-width: $mobile) {
+      gap: 0px;
+    }
   }
   &__product {
     display: block;
