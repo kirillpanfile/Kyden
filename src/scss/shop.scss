@@ -1,0 +1,19 @@
+.shop {
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    &__product {
+        display: block;
+        margin-bottom: 30px;
+    }
+    &__title {
+        // text-align: center;
+        margin-left: 20px;
+        font-size: rem(24);
+        margin-bottom: 40px;
+    }
+}
