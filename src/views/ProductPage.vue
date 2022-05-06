@@ -1,4 +1,17 @@
 <template>
+  <ul class="breadcrumbs__list breadcrumbs__container">
+    <li class="breadcrumbs__item">
+      <a href="/" class="breadcrumbs__link"> Home </a>
+    </li>
+
+    <li class="breadcrumbs__item">
+      <a href="" class="breadcrumbs__link"> Store </a>
+    </li>
+
+    <li class="breadcrumbs__item">
+      <span class="breadcrumbs__current"> BeforeStorm Poster </span>
+    </li>
+  </ul>
   <div class="card card__container">
     <div class="card__wrapper">
       <div class="card__image">
@@ -11,6 +24,13 @@
         <h1 class="card__name">{{ prodItem.name }}</h1>
         <div class="card__price">
           <span>{{ prodItem.price }}</span>
+        </div>
+        <div class="card__description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+            assumenda possimus ex in aspernatur quo fugiat numquam qui
+            cupiditate placeat obcaecati debitis.
+          </p>
         </div>
         <div class="card__sizes">
           <span>SELECT SIZE:</span>
