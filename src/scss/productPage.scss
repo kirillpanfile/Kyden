@@ -1,0 +1,77 @@
+.card {
+    display: flex;
+    width: 100%;
+    padding: 0px 80px;
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 40px;
+    }
+
+    &__image {
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+            height: 600px;
+            object-fit: cover;
+        }
+        width: 100%;
+    }
+
+    &__info {
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    &__name { 
+        font-size: rem(36);
+        margin-bottom: 20px;
+    }
+    &__price {
+        font-weight: 300;
+        margin-bottom: 120px;
+    }
+
+    &__sizes {
+        span {
+            font-size: rem(12);
+            font-weight: 700;
+            color: rgb(142, 142, 142);
+        }
+    }
+
+    &__sizes-buttons {
+        margin-top: 20px;
+    }
+
+    &__sizes-button {
+        width: 60px;
+        text-align: center;
+        padding: 14px 16px;
+        margin-right: 14px;
+        background-color: rgba(255, 255, 255, 0.024);
+    }
+
+    &__count {
+        select {
+            width: 220px;
+            background-color: rgba(255, 255, 255, 0.024);
+            color: $mainColor;
+            padding: 14px;
+            margin-right: 12px;
+            border: 1px solid $mainColor;
+        }
+        option {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.024);
+            color: $bgColor;
+        }
+    }
+    &__button {
+        width: 200px;
+        height: 100%;
+    }
+}
