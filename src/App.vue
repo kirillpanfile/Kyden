@@ -8,17 +8,17 @@
 </template>
 
 <script>
-import MyHeader from './components/MyHeader.vue'
-import MyFooter from './components/MyFooter.vue'
+import MyHeader from "./components/MyHeader.vue";
+import MyFooter from "./components/MyFooter.vue";
 export default {
-  name: 'app',
+  name: "app",
   components: {
     MyHeader,
-    MyFooter
+    MyFooter,
   },
   mounted() {
-    this.$store.dispatch('getProducts')
-  }
-}
+    this.$store.dispatch("getProducts");
+  },
+};
 </script>
 <style lang="scss"></style>

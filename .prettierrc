@@ -6,19 +6,5 @@
   "singleQuote": true,
   "trailingComma": "none",
   "bracketSpacing": true,
-  "jsxBracketSameLine": false,
-  "arrowParens": "avoid",
-  "requirePragma": false,
-  "insertPragma": false,
-  "requireSemi": false,
-  "prohibitAutofix": false,
-  "enableExperimental": false,
-  "useFlowParser": false,
-  "useBabel": false,
-  "useEslint": false,
-  "useStylelint": false,
-  "usePrettier": true,
-  "useVscode": false,
-  "useVscodeLint": false,
-  "useVscodeLinting": false
+  "jsxBracketSameLine": false
 }
