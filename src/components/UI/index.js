@@ -1,3 +1,3 @@
-import Button from './appButton'
-import Line from './appLine'
-export default [Button, Line]
+import Button from "./appButton.vue";
+import Line from "./appLine.vue";
+export default [Button, Line];

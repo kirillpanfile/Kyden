@@ -20,16 +20,16 @@
 </template>
 
 <script>
-import myProduct from '@/components/myProduct'
+import myProduct from "/src/components/myProduct.vue";
 export default {
-  name: 'Shop',
+  name: "Shop",
   components: {
-    myProduct
+    myProduct,
   },
   computed: {
     products() {
-      return this.$store.state.products
-    }
-  }
-}
+      return this.$store.state.products;
+    },
+  },
+};
 </script>

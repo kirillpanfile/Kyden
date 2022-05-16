@@ -15,10 +15,7 @@
   <div class="card card__container">
     <div class="card__wrapper">
       <div class="card__image">
-        <img
-          :src="require(`../assets/Products/${prodItem.image}`)"
-          alt="product"
-        />
+        <img :src="`/src/assets/Products/${prodItem.image}`" alt="product" />
       </div>
       <div class="card__info">
         <h1 class="card__name">{{ prodItem.name }}</h1>
@@ -60,25 +57,25 @@
 
 <script>
 export default {
-  name: 'ProductPage',
+  name: "ProductPage",
   data() {
     return {
-      count: 1
-    }
+      count: 1,
+    };
   },
   computed: {
     prodItem() {
       return this.$store.state.products.filter(
         (el) => el.id == this.$route.params.id
-      )[0]
-    }
+      )[0];
+    },
   },
   mounted() {
     setTimeout(() => {
-      console.log(this.prodItem)
-    }, 1000)
-  }
-}
+      console.log(this.prodItem);
+    }, 1000);
+  },
+};
 </script>
 
 <style></style>

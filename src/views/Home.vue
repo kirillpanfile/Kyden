@@ -48,25 +48,25 @@
 </template>
 
 <script>
-import product from '@/components/myProduct'
+import product from "/src/components/myProduct.vue";
 export default {
   components: {
-    product
+    product,
   },
   computed: {
     products() {
       try {
-        let tmp = this.$store.state.products
+        let tmp = this.$store.state.products;
         return Object.values(tmp)
           .map((el) => (el = JSON.parse(JSON.stringify(el))))
           .sort((a, b) => b.stars - a.stars)
-          .slice(0, 4)
+          .slice(0, 4);
       } catch (error) {
-        console.table(error)
+        console.table(error);
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style>
