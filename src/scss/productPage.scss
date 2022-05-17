@@ -18,7 +18,7 @@
       display: block;
       margin: 0 auto;
       width: 80%;
-      @include adaptiveValue('height', 600, 400);
+      @include adaptiveValue("height", 600, 400);
       object-fit: cover;
     }
     width: 100%;
@@ -61,10 +61,12 @@
 
   &__sizes-buttons {
     margin-top: 20px;
+    display: flex;
   }
 
   &__sizes-button {
     width: 60px;
+    cursor: pointer;
     text-align: center;
     padding: 14px 16px;
     margin-right: 14px;
@@ -114,7 +116,7 @@
     flex: 0 1 auto;
     font-size: rem(14);
     &:not(:last-child)::after {
-      content: '»';
+      content: "»";
       margin-left: 8px;
       margin-right: 8px;
     }

@@ -9,7 +9,7 @@
     </li>
 
     <li class="breadcrumbs__item">
-      <span class="breadcrumbs__current"> BeforeStorm Poster </span>
+      <span class="breadcrumbs__current"> {{ prodItem.name }} </span>
     </li>
   </ul>
   <div class="card card__container">
@@ -32,13 +32,20 @@
         <div class="card__sizes">
           <span>SELECT SIZE:</span>
           <div class="card__sizes-buttons">
-            <button
+            <div
               class="card__sizes-button"
-              v-for="size in prodItem.sizes"
-              :key="size"
+              v-for="(size, index) in this.sizes"
+              :key="size.key"
+              @click="select(size.key, size.isSelected)"
+              :class="{
+                selected: size.isSelected,
+                notselected: !size.isSelected,
+              }"
             >
-              {{ size }}
-            </button>
+              <button>
+                {{ size.value }}
+              </button>
+            </div>
           </div>
         </div>
         <app-line></app-line>
@@ -46,7 +53,7 @@
           <select name="count" v-model="count">
             <option v-for="i in 5" :key="i">{{ i }}</option>
           </select>
-          <app-button class="card__button" type="primary">
+          <app-button @click="addToCart" class="card__button" type="primary">
             ADD TO CART
           </app-button>
         </div>
@@ -61,6 +68,8 @@ export default {
   data() {
     return {
       count: 1,
+      sizes: [],
+      currentSize: "",
     };
   },
   computed: {
@@ -70,10 +79,45 @@ export default {
       )[0];
     },
   },
+  methods: {
+    select(key) {
+      for (let i = 0; i < this.sizes.length; i++) {
+        if (this.sizes[i].key !== key) {
+          this.sizes[i].isSelected = false;
+        }
+      }
+
+      this.toggleSelection(key);
+    },
+    toggleSelection(key) {
+      const stepsItem = this.sizes.find((item) => item.key === key);
+      this.currentSize = stepsItem.value;
+      if (stepsItem) {
+        stepsItem.isSelected = !stepsItem.isSelected;
+      }
+    },
+    addToCart() {
+      this.$store.dispatch("addToCart", {
+        id: this.prodItem.id,
+        name: this.prodItem.name,
+        price: this.prodItem.price,
+        count: this.count,
+        size: this.currentSize,
+      });
+    },
+  },
   mounted() {
-    setTimeout(() => {
-      console.log(this.prodItem);
-    }, 1000);
+    this.currentSize = this.prodItem.sizes[0];
+    let data = [];
+    for (let index = 0; index < this.prodItem.sizes.length; index++) {
+      data.push({
+        key: index,
+        value: this.prodItem.sizes[index],
+        isSelected: false,
+      });
+    }
+    this.sizes = data;
+    console.log(data);
   },
 };
 </script>
