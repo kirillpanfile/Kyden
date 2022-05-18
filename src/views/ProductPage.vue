@@ -101,9 +101,11 @@ export default {
         id: this.prodItem.id,
         name: this.prodItem.name,
         price: this.prodItem.price,
+        image: this.prodItem.image,
         count: this.count,
         size: this.currentSize,
       });
+      this.$swal("Item added to cart", "", "success");
     },
   },
   mounted() {

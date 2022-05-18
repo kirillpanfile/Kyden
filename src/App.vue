@@ -1,5 +1,5 @@
 <template>
-  <div class="container container--outer">
+  <div v-if="!loading" class="container container--outer">
     <my-header></my-header>
     <router-view></router-view>
     <app-line></app-line>
@@ -8,16 +8,26 @@
 </template>
 
 <script>
-import MyHeader from "./components/myHeader.vue";
-import MyFooter from "./components/myFooter.vue";
+import MyHeader from "/src/components/myHeader.vue";
+import MyFooter from "/src/components/myFooter.vue";
 export default {
   name: "app",
   components: {
     MyHeader,
     MyFooter,
   },
+  data() {
+    return {
+      loading: true,
+    };
+  },
   mounted() {
-    this.$store.dispatch("getProducts");
+    this.$store.dispatch("getProducts").then(() => {
+      this.loading = false;
+    });
+    window.addEventListener("beforeunload", () => {
+      this.$store.dispatch("addToLocalStorage");
+    });
   },
 };
 </script>

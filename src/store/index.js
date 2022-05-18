@@ -12,8 +12,13 @@ export default createStore({
     },
     ADD_TO_CART(state, product) {
       state.cart.push(product);
+    },
+    ADD_TO_LOCALSTORAGE(state) {
       localStorage.setItem("cart", JSON.stringify(state.cart));
     },
+    REMOVE_ITEM_FROM_CART(state, index) {
+      state.cart.splice(index, 1);
+    }
   },
   actions: {
     async getProducts({ commit }) {
@@ -27,6 +32,12 @@ export default createStore({
     },
     addToCart({ commit }, product) {
       commit("ADD_TO_CART", product);
+    },
+    addToLocalStorage({ commit }) {
+      commit("ADD_TO_LOCALSTORAGE");
+    },
+    removeItemFromCart({ commit }, index) {
+      commit("REMOVE_ITEM_FROM_CART", index);
     }
   },
   modules: {},

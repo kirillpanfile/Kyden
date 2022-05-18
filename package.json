@@ -17,6 +17,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
     "miragejs": "^0.1.44",
-    "vite": "^2.9.9"
+    "vite": "^2.9.9",
+    "vue-sweetalert2": "^5.0.5"
   }
 }
