@@ -74,31 +74,20 @@
   }
 
   &__count {
+    display: flex;
     margin-top: 40px;
-    select {
-      position: relative;
-      appearance: none;
-      width: 220px;
-      outline: none;
-      background-color: rgba(255, 255, 255, 0.024);
-      color: $mainColor;
-      padding: 14px 24px 14px 14px;
-      margin-right: 12px;
-      margin-bottom: 12px;
-      @media (max-width: $mobile) {
-        margin-right: 0px;
-      }
-      border: 1px solid $mainColor;
-      option {
-        padding: 20px;
-        background-color: $bgColor;
-        color: $mainColor;
-      }
+    justify-content: flex-start;
+    gap: 20px;
+    .select-field {
+      width: 200px;
+      height: 45px;
     }
+    // margin-top: 40px;
+    // @include adaptiveValue("width", 120, 20);
   }
   &__button {
     width: 220px;
-    height: 100%;
+    height: 45px;
   }
 }
 

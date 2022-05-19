@@ -21,6 +21,11 @@ export default {
       loading: true,
     };
   },
+  watch: {
+    $route() {
+      window.scrollTo(0, 0);
+    },
+  },
   mounted() {
     this.$store.dispatch("getProducts").then(() => {
       this.loading = false;

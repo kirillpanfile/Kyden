@@ -34,7 +34,7 @@
           <div class="card__sizes-buttons">
             <div
               class="card__sizes-button"
-              v-for="(size, index) in this.sizes"
+              v-for="size in this.sizes"
               :key="size.key"
               @click="select(size.key, size.isSelected)"
               :class="{
@@ -50,9 +50,26 @@
         </div>
         <app-line></app-line>
         <div class="card__count">
-          <select name="count" v-model="count">
-            <option v-for="i in 5" :key="i">{{ i }}</option>
-          </select>
+          <div
+            class="select-field select-field--quantity select-field--transparent select-field--base select-field--cart-item"
+          >
+            <select name="count" v-model="count" class="select-field__select">
+              <option v-for="i in 5" :key="i">{{ i }}</option>
+            </select>
+            <div class="select-field__dropdown-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#fff"
+                  d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
+                ></path>
+              </svg>
+            </div>
+          </div>
           <app-button @click="addToCart" class="card__button" type="primary">
             ADD TO CART
           </app-button>
@@ -60,11 +77,32 @@
       </div>
     </div>
   </div>
+  <div class="featured-section">
+    <div class="featured__container featured-section__wrapper">
+      <div class="featured__data">
+        <h1 class="featured__title">YOU MAY ALSO LIKE</h1>
+      </div>
+      <div class="featured-row">
+        <div v-for="item in products" :key="item.id">
+          <product
+            :image="item.image"
+            :name="item.name"
+            :price="item.price"
+            :id="item.id"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+import product from "/src/components/myProduct.vue";
 export default {
   name: "ProductPage",
+  components: {
+    product,
+  },
   data() {
     return {
       count: 1,
@@ -77,6 +115,17 @@ export default {
       return this.$store.state.products.filter(
         (el) => el.id == this.$route.params.id
       )[0];
+    },
+    products() {
+      try {
+        let tmp = this.$store.state.products;
+        return Object.values(tmp)
+          .map((el) => (el = JSON.parse(JSON.stringify(el))))
+          .sort((a, b) => b.stars - a.stars)
+          .slice(0, 4);
+      } catch (error) {
+        console.table(error);
+      }
     },
   },
   methods: {

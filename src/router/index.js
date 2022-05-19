@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 const routes = [
   {
     path: "/",
@@ -16,17 +16,17 @@ const routes = [
     component: () => import("../views/ProductPage.vue"),
     meta: {
       requiresAuth: false,
-    }
+    },
   },
   {
     path: "/cart",
     name: "cart",
     component: () => import("../views/Cart.vue"),
-  }
+  },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 

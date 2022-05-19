@@ -6,7 +6,7 @@
           {{ cart.length }} ITEM IN YOUR CART FOR {{ cartPrice }}
         </div>
         <div class="cart-title" v-else>
-          {{ cart.length }} ITEMS IN YOUR CART FOR {{ cartPrice }}
+          {{ cart.length }} ITEMS IN YOUR CART FOR ${{ cartPrice }}
         </div>
         <div class="cart__content">
           <div class="cart__items-header">
@@ -22,22 +22,36 @@
               <div class="cart-item__image">
                 <a href="3" class="cart-item__image-link"
                   ><div class="image">
-                    <div class="image__object">
-                      <img
-                        :src="`/src/assets/Products/${item.image}`"
-                        :alt="item.name"
-                      />
-                    </div></div
+                    <router-link
+                      :to="{
+                        path: '/product/' + item.id,
+                        query: {
+                          productName: item.name,
+                        },
+                      }"
+                    >
+                      <div class="image__object">
+                        <img
+                          :src="`/src/assets/Products/${item.image}`"
+                          :alt="item.name"
+                        />
+                      </div>
+                    </router-link></div
                 ></a>
               </div>
               <div class="cart-item__main">
                 <div class="cart-item__description">
-                  <a
-                    href="/products/beforestorm-framed-poster"
+                  <router-link
+                    :to="{
+                      path: '/product/' + item.id,
+                      query: {
+                        productName: item.name,
+                      },
+                    }"
                     class="cart-item__title"
-                    >{{ item.name }}</a
+                    >Product: {{ item.name }}</router-link
                   >
-                  <p class="cart-item__variant-title">{{ item.size }}</p>
+                  <p class="cart-item__variant-title">Size : {{ item.size }}</p>
                 </div>
                 <div class="cart-item__price">
                   <p class="cart-item__price-value">{{ item.price }}</p>
@@ -94,17 +108,87 @@
             </div>
           </div>
         </div>
+        <div class="cart__footer">
+          <div class="cart-footer">
+            <div class="cart-footer__cta-container">
+              <div class="cart-footer__totals">
+                <div class="cart-totals">
+                  <div class="cart-totals__item cart-totals__item--subtotal">
+                    <div class="cart-totals__label">
+                      <span class="cart-totals__subtotal">Subtotal</span>
+                    </div>
+                    <div
+                      class="cart-totals__amount cart-totals__amount--subtotal"
+                    >
+                      ${{ cartPrice }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-footer__cta">
+                <div class="cart-footer__checkout">
+                  <form class="cart-footer__checkout-form">
+                    <router-link to=""
+                      ><app-button type="primary">
+                        Checkout
+                      </app-button></router-link
+                    >
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="cart-footer__continue">
+              <router-link to="/shop">
+                <app-button type="skelet"
+                  >Back to Shopping
+                </app-button></router-link
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="featured-section">
+      <div class="featured__container featured-section__wrapper">
+        <div class="featured__data">
+          <h1 class="featured__title">YOU MAY ALSO LIKE</h1>
+        </div>
+        <div class="featured-row">
+          <div v-for="item in products" :key="item.id">
+            <product
+              :image="item.image"
+              :name="item.name"
+              :price="item.price"
+              :id="item.id"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import product from "/src/components/myProduct.vue";
 export default {
   name: "cart",
+  components: {
+    product,
+  },
   computed: {
     cart() {
       return this.$store.state.cart;
+    },
+    products() {
+      try {
+        let tmp = this.$store.state.products;
+        return Object.values(tmp)
+          .map((el) => (el = JSON.parse(JSON.stringify(el))))
+          .sort((a, b) => b.stars - a.stars)
+          .slice(0, 4);
+      } catch (error) {
+        console.table(error);
+      }
     },
     cartPrice() {
       let price = 0;
