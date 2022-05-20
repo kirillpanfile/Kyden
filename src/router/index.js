@@ -23,6 +23,16 @@ const routes = [
     name: "cart",
     component: () => import("../views/Cart.vue"),
   },
+  // {
+  //   path: "/checkout",
+  //   name: "checkout",
+  //   component: () => import("../views/Checkout.vue"),
+  // },
+  {
+    name: "privacy",
+    path: "/privacy-policy",
+    component: () => import("../views/Privacy.vue"),
+  },
 ];
 
 const router = createRouter({

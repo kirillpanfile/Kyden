@@ -24,7 +24,7 @@
         <div class="footer-col__title">NEED HELP ?</div>
         <div class="footer__data">
           <a href="mailto:kirillpanfile@gmail.com">Contact us</a>
-          <a href="">Privacy Policy</a>
+          <router-link to="/privacy-policy">Privacy Policy</router-link>
           <span>©2022</span>
         </div>
       </div>
@@ -34,8 +34,8 @@
 
 <script>
 export default {
-  name: 'my-footer'
-}
+  name: "my-footer",
+};
 </script>
 
 <style></style>
