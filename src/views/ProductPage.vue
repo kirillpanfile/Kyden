@@ -107,7 +107,7 @@ export default {
     return {
       count: 1,
       sizes: [],
-      currentSize: "",
+      currentSize: "S" || "M",
     };
   },
   computed: {
@@ -168,6 +168,7 @@ export default {
       });
     }
     this.sizes = data;
+    this.select(0);
     console.log(data);
   },
 };
