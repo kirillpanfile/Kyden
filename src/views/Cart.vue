@@ -1,7 +1,7 @@
 <template>
   <div class="cart">
     <div class="cart__container">
-      <div class="cart__inner">
+      <div class="cart__inner" v-if="cart.length">
         <div class="cart-title" v-if="cart.length == 1">
           {{ cart.length }} ITEM IN YOUR CART FOR {{ cartPrice }}
         </div>
@@ -128,11 +128,9 @@
               <div class="cart-footer__cta">
                 <div class="cart-footer__checkout">
                   <form class="cart-footer__checkout-form">
-                    <router-link to=""
-                      ><app-button type="primary">
-                        Checkout
-                      </app-button></router-link
-                    >
+                    <a>
+                      <app-button type="primary"> Checkout </app-button>
+                    </a>
                   </form>
                 </div>
               </div>
@@ -146,6 +144,23 @@
             </div>
           </div>
         </div>
+      </div>
+      <div
+        class="cart__inner"
+        v-else
+        style="padding-top: 110px; padding-bottom: 110px; text-align: center"
+      >
+        <div class="cart-title" style="font-size: 1.9rem">
+          YOUR SHOPPING CART IS EMPTY
+        </div>
+        <router-link to="/shop">
+          <app-button
+            type="primary"
+            style="padding: 26px 70px; font-size: 1rem"
+          >
+            Start Shopping</app-button
+          >
+        </router-link>
       </div>
     </div>
     <div class="featured-section">

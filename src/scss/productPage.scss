@@ -62,6 +62,9 @@
   &__sizes-buttons {
     margin-top: 20px;
     display: flex;
+    @media (max-width: $mobile) {
+      justify-content: center;
+    }
   }
 
   &__sizes-button {

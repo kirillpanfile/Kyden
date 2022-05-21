@@ -42,11 +42,17 @@
   &__quantity {
     display: block;
     flex: 0 0 180px;
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
   &__price {
     display: block;
     flex: 0 0 80px;
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
   &__remove {
@@ -72,6 +78,9 @@
     flex: 1 1 auto;
     margin-left: 22px;
     align-items: center;
+    @media (max-width: $mobile) {
+      display: block;
+    }
   }
 
   &__description {
@@ -98,6 +107,9 @@
     flex: 0 0 80px;
     margin-top: 0;
     margin-left: 15px;
+    @media (max-width: $mobile) {
+      margin-left: 0;
+    }
   }
 
   &__price-value {
@@ -230,11 +242,10 @@ swal2-styled {
   display: flex;
   // flex-wrap: wrap;
   width: 100%;
-  // .cart-footer__cta-container
-
-  &__cta-container {
-    // width: 100%;
+  @media (max-width: $mobile) {
+    display: block;
   }
+  // .cart-footer__cta-container
 
   // .cart-footer__totals
 
@@ -263,6 +274,16 @@ swal2-styled {
       @include adaptiveValue("width", 320, 200);
       @include adaptiveValue("height", 60, 40);
       @include adaptiveValue("font-size", 16, 12);
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+      > a {
+        width: 100%;
+        button {
+          display: block;
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -296,6 +317,15 @@ swal2-styled {
       @include adaptiveValue("width", 320, 200);
       @include adaptiveValue("height", 60, 40);
       @include adaptiveValue("font-size", 16, 12);
+    }
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+    > a {
+      button {
+        display: block;
+        width: 100%;
+      }
     }
   }
 }

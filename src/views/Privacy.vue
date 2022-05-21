@@ -241,6 +241,7 @@ export default {};
   &__wrapper {
     max-width: 940px;
     margin: 0 auto;
+    padding: 0px 20px;
     line-height: 1.5;
   }
   &-title {

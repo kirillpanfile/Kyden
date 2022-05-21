@@ -18,6 +18,9 @@
         </div>
         <div class="header__sections-right">
           <div class="header__button">
+            <div class="header__cart-count" v-if="cart.length">
+              {{ cart.length }}
+            </div>
             <router-link to="/cart">
               <svg
                 width="18"
@@ -45,6 +48,11 @@
 <script>
 export default {
   name: "my-header",
+  computed: {
+    cart() {
+      return this.$store.state.cart;
+    },
+  },
 };
 </script>
 
