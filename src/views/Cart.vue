@@ -1,4 +1,5 @@
 <template>
+  <my-checkout :open="isCheckout" @closeChekout="closeChekout"></my-checkout>
   <div class="cart">
     <div class="cart__container">
       <div class="cart__inner" v-if="cart.length">
@@ -127,11 +128,11 @@
               </div>
               <div class="cart-footer__cta">
                 <div class="cart-footer__checkout">
-                  <form class="cart-footer__checkout-form">
-                    <a>
+                  <div class="cart-footer__checkout-form">
+                    <div @click="openCheckout">
                       <app-button type="primary"> Checkout </app-button>
-                    </a>
-                  </form>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -185,10 +186,17 @@
 
 <script>
 import product from "/src/components/myProduct.vue";
+import myCheckout from "/src/components/myCheckout.vue";
 export default {
   name: "cart",
   components: {
     product,
+    myCheckout,
+  },
+  data() {
+    return {
+      isCheckout: false,
+    };
   },
   computed: {
     cart() {
@@ -216,6 +224,12 @@ export default {
   methods: {
     removeItemFromCart(index) {
       this.$store.dispatch("removeItemFromCart", index);
+    },
+    openCheckout() {
+      this.isCheckout = !this.isCheckout;
+    },
+    closeChekout() {
+      this.isCheckout = !this.isCheckout;
     },
   },
 };

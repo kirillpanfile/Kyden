@@ -28,6 +28,7 @@ export default {
   watch: {
     $route() {
       window.scrollTo(0, 0);
+      document.body.classList.remove("checkout-open");
     },
   },
   mounted() {

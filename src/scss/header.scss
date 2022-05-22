@@ -59,6 +59,15 @@
   line-height: 16px;
   font-size: 12px;
   background-color: $btnColor;
+  @media (max-width: $mobile) {
+    left: auto;
+    right: -10px;
+    top: -10px;
+    width: 12px;
+    height: 12px;
+    font-size: rem(10);
+    line-height: math.div(12, 10);
+  }
 }
 //====================================================================================================
 

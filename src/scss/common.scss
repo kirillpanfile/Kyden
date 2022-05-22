@@ -2,9 +2,11 @@
 body {
   position: relative;
   padding-bottom: 0;
-  width: 100%;
+  width: auto;
   min-height: 100% !important;
   background-color: #111111;
+  transition: margin-left 0.5s;
+  transition: margin-right 0.5s;
 }
 button {
   border: none;

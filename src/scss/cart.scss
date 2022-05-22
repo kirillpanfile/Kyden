@@ -312,7 +312,8 @@ swal2-styled {
 
 .cart-footer__checkout-form {
   width: max-content;
-  > a {
+  > a,
+  div {
     > button {
       @include adaptiveValue("width", 320, 200);
       @include adaptiveValue("height", 60, 40);
@@ -321,7 +322,8 @@ swal2-styled {
   }
   @media (max-width: $mobile) {
     width: 100%;
-    > a {
+    > a,
+    div {
       button {
         display: block;
         width: 100%;

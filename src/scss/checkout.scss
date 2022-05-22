@@ -1,0 +1,162 @@
+.checkout {
+  height: 100%;
+  width: 420px;
+  right: -420px;
+  position: fixed;
+  z-index: 9999 !important;
+  top: 0;
+  //   right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  border-left: 1px solid rgba(246, 234, 225, 0.6);
+  padding-top: 24px;
+}
+.open {
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  right: 0;
+  background-color: #111111;
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgb(0 0 0 / 60%);
+  transition: 0.5s;
+}
+
+.checkout-open {
+  //   margin-right: 420px !important;
+  margin-left: -420px;
+  margin-right: 420px;
+  overflow: hidden !important;
+  width: auto;
+  transition: 0.5s;
+}
+body {
+  width: auto !important;
+}
+.checkout-header {
+  padding: 0px 32px 0px 32px;
+}
+.checkout-header-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: rem(18);
+}
+.checkout-body {
+  padding: 0px 32px 0px 32px;
+}
+.checkout-body-left-title {
+  margin-top: 24px;
+  font-size: rem(18);
+}
+.checkout-body-left-form {
+  display: flex;
+  flex-direction: column;
+}
+.checkout-body-left-form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-top: 12px;
+  label {
+    margin-top: 4px;
+    color: rgba(246, 234, 225, 0.6);
+  }
+  input {
+    border: none;
+    border-bottom: 1px solid rgba(246, 234, 225, 0.6);
+    background-color: transparent !important;
+    color: rgba(246, 234, 225, 0.6);
+    font-size: rem(16);
+    padding: 6px;
+    margin-top: 6px;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.checkout__button {
+  width: 100%;
+  margin-top: 24px;
+  button {
+    width: 100%;
+  }
+}
+
+.checkout-item {
+  width: 100%;
+  // .checkout-item__block
+
+  &__block {
+    display: flex;
+    // flex-direction: column;
+    font-family: "Roboto Condensed", sans-serif;
+    align-items: center;
+    gap: 32px;
+    margin-top: 24px;
+    // padding-bottom: 24px;
+    // border-bottom: 1px solid rgba(246, 234, 225, 0.1);
+  }
+
+  // .checkout-item__image
+
+  &__image {
+    width: 100px;
+    img {
+      width: 100%;
+    }
+  }
+
+  // .checkout-item__content
+
+  &__content {
+  }
+
+  // .checkout-item__title
+
+  &__title {
+    font-family: "Roboto Condensed", sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    color: #f6eae1;
+    font-size: rem(14);
+  }
+
+  // .checkout-item__variant
+
+  &__variant {
+    font-family: "Roboto Condensed", sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    font-size: rem(14);
+    margin-top: 2px;
+    color: rgba(246, 234, 225, 0.6);
+  }
+
+  // .checkout-item__price
+
+  &__price {
+    font-family: "Roboto Condensed", sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    font-size: rem(14);
+    margin-top: 2px;
+    color: rgba(246, 234, 225, 0.6);
+  }
+}
