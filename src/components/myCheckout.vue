@@ -16,7 +16,7 @@
           <div class="checkout-item__block">
             <div class="checkout-item__image">
               <img
-                :src="`/src/assets/Products/${item.image}`"
+                :src="require(`/src/assets/Products/${item.image}`)"
                 :alt="item.name"
               />
             </div>
@@ -112,7 +112,7 @@
           <div class="checkout-item__block" v-if="index < 4">
             <div class="checkout-item__image">
               <img
-                :src="`/src/assets/Products/${item.image}`"
+                :src="require(`/src/assets/Products/${item.image}`)"
                 :alt="item.name"
               />
             </div>

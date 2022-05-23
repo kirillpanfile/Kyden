@@ -13,7 +13,7 @@ export default {
         products: data
       },
       routes() {
-        this.timing = 500
+        this.logging = false
         this.namespace = 'api'
         this.get('/products', (schema) => schema.db.products)
       }

@@ -15,7 +15,10 @@
   <div class="card card__container">
     <div class="card__wrapper">
       <div class="card__image">
-        <img :src="`/src/assets/Products/${prodItem.image}`" alt="product" />
+        <img
+          :src="require(`/src/assets/Products/${prodItem.image}`)"
+          alt="product"
+        />
       </div>
       <div class="card__info">
         <h1 class="card__name">{{ prodItem.name }}</h1>
@@ -169,7 +172,6 @@ export default {
     }
     this.sizes = data;
     this.select(0);
-    console.log(data);
   },
 };
 </script>

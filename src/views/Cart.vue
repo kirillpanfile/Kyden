@@ -33,7 +33,7 @@
                     >
                       <div class="image__object">
                         <img
-                          :src="`/src/assets/Products/${item.image}`"
+                          :src="require(`/src/assets/Products/${item.image}`)"
                           :alt="item.name"
                         />
                       </div>

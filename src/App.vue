@@ -1,11 +1,11 @@
 <template>
-  <div class="container container--outer">
+  <div class="container container--outer" v-if="!loading">
     <my-header></my-header>
     <router-view></router-view>
     <app-line></app-line>
-    <my-loader :load="loading"></my-loader>
     <my-footer></my-footer>
   </div>
+  <my-loader :load="loading"></my-loader>
 </template>
 
 <script>
@@ -38,6 +38,8 @@ export default {
     window.addEventListener("beforeunload", () => {
       this.$store.dispatch("addToLocalStorage");
     });
+    console.log("Kyden");
+    console.log("FOR YOUR SECURITY DO NOT TYPE ANYTHING HERE");
   },
 };
 </script>

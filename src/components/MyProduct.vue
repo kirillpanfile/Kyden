@@ -10,7 +10,7 @@
     <div class="product">
       <div class="product-inner">
         <div class="product-inner__image">
-          <img :src="`/src/assets/Products/${image}`" alt="" />
+          <img :src="require(`/src/assets/Products/${image}`)" alt="" />
         </div>
         <div class="product-inner__info">
           <h1>{{ name }}</h1>
